@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseFlow | Courses</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-page="courses">
+    <div class="bg-texture"></div>
+    <header class="site-header">
+      <div class="logo">CourseFlow</div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/admin">Admin</a>
+      </nav>
+      <div class="auth-actions">
+        <span id="headerRole" class="role-badge hidden">guest</span>
+        <a id="loginLink" class="ghost" href="/auth">Login</a>
+        <button id="logoutBtn" class="ghost" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="courses-section">
+        <div class="section-header">
+          <h2>Courses</h2>
+          <p>Explore available courses and enroll instantly.</p>
+        </div>
+        <div class="filters">
+          <select id="filterStatus">
+            <option value="all">All statuses</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+          </select>
+          <select id="filterDue">
+            <option value="all">All dates</option>
+            <option value="soon">Due soon (30 days)</option>
+            <option value="past">Past due</option>
+          </select>
+        </div>
+        <div id="coursesGrid" class="grid"></div>
+        <div id="courseDetail" class="card hidden">
+          <h3 id="courseDetailTitle"></h3>
+          <p id="courseDetailContent"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

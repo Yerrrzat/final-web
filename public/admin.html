@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseFlow | Admin</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-page="admin">
+    <div class="bg-texture"></div>
+    <header class="site-header">
+      <div class="logo">CourseFlow</div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/courses">Courses</a>
+        <a href="/profile">Profile</a>
+      </nav>
+      <div class="auth-actions">
+        <span id="headerRole" class="role-badge hidden">guest</span>
+        <a id="loginLink" class="ghost" href="/auth">Login</a>
+        <button id="logoutBtn" class="ghost" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin">
+        <div class="section-header">
+          <h2>Admin Course Manager</h2>
+          <p>Create and manage course catalog.</p>
+        </div>
+        <div class="card">
+          <form id="courseForm">
+            <input type="text" name="title" placeholder="Course title" required />
+            <textarea name="description" placeholder="Description" required></textarea>
+            <textarea name="content" placeholder="Course content (visible to logged-in users)"></textarea>
+            <input type="date" name="dueDate" />
+            <label class="toggle">
+              <input type="checkbox" name="status" checked />
+              <span>Active</span>
+            </label>
+            <button class="primary" type="submit">Create course</button>
+          </form>
+          <p class="hint" id="courseMessage"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

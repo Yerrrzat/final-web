@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseFlow | Auth</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-page="auth">
+    <div class="bg-texture"></div>
+    <header class="site-header">
+      <div class="logo">CourseFlow</div>
+      <nav class="nav">
+        <a href="/courses">Courses</a>
+        <a href="/profile">Profile</a>
+        <a href="/">Home</a>
+      </nav>
+      <div class="auth-actions">
+        <span id="headerRole" class="role-badge hidden">guest</span>
+        <button id="logoutBtn" class="ghost" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-section">
+        <div class="card">
+          <h2>Register</h2>
+          <form id="registerForm">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <select name="role">
+              <option value="user">User</option>
+              <option value="premium">Premium</option>
+              <option value="admin">Admin</option>
+              <option value="moderator">Moderator</option>
+            </select>
+            <button class="primary" type="submit">Create account</button>
+          </form>
+          <p class="hint" id="registerMessage"></p>
+        </div>
+        <div class="card">
+          <h2>Login</h2>
+          <form id="loginForm">
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button class="primary" type="submit">Log in</button>
+          </form>
+          <p class="hint" id="loginMessage"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
