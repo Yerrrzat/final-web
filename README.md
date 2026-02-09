@@ -86,20 +86,6 @@ Admin page — Course management
 
 ![](docs/screenshots/admin.png)
 
-## Deployment
 
-- Use Render/Railway/Replit
-- Set environment variables (`MONGO_URI`, `JWT_SECRET`, SMTP keys)
-- Use the deployed URL in your final submission
-
-### Example (Render)
-1. Push the project to GitHub.
-2. Create a new Web Service on Render.
-3. Set Build Command: `npm install`
-4. Set Start Command: `npm start`
-5. Add environment variables from `.env.example`.
-6. Deploy and copy the public URL.
-
-Deployed URL: <ADD_YOUR_DEPLOYED_URL_HERE>
-GitHub Repo: <ADD_YOUR_GITHUB_REPO_URL_HERE>
-
+Deployed URL: https://final-web-68up.onrender.com
+GitHub Repo: https://github.com/Yerrrzat/final-web
