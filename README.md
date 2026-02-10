@@ -18,13 +18,7 @@ Online Courses platform with JWT authentication, RBAC, course management, and en
 npm install
 ```
 
-2. Create `.env` from the template:
-
-```
-copy .env.example .env
-```
-
-3. Start MongoDB locally, then run:
+2. Start MongoDB locally, then run:
 
 ```
 npm run dev
